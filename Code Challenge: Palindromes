@@ -1,0 +1,12 @@
+def is_palindrome(teststr):
+    # Your code goes here.
+    teststr = teststr.lower()                   # convert the string to all lower (or upper) case
+    newstr = []                                 # create an empty new string to store the alpha numeric characters from teststr
+    for x in range(len(teststr)):               # create a for loop to run through the length in teststr
+        if teststr[x].isalnum() == True:        # if the teststr character in position x is alpha numeric
+            newstr += teststr[x]                # then add that character to the new string
+    if newstr == newstr[::-1]:                  # when the loop is over, if the new string is equal to the reverse of the new string
+        return True                             # then return bool True (1) 
+    else: return False                          # otherwise retrun bool False (0)
+
+# The Test code will add up your return values ( X True (1) values, and any False (0) values, will sum your result to X )
