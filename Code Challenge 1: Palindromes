@@ -1,5 +1,4 @@
 def is_palindrome(teststr):
-    # Your code goes here.
     teststr = teststr.lower()                   # convert the string to all lower (or upper) case
     newstr = []                                 # create an empty new string to store the alpha numeric characters from teststr
     for x in range(len(teststr)):               # create a for loop to run through the length in teststr
