@@ -1,0 +1,7 @@
+import calendar
+
+def count_days(year, month, whichday):
+    count = 0                                          # start a variable to count the correct whichdays
+    for i in calendar.monthcalendar(year, month):      # create a for loop to run through each week of the month (calendar outputs a week per line)
+        if i[whichday] != 0: count += 1                # if that week indexed to whichday does not equal 0 (0s are on other months, 1s are on this month), add 1 to count variable
+    return count                                       # after the loop completes, return the count variable
