@@ -1,0 +1,8 @@
+import os
+
+def file_info():
+    bytes = 0                                              # create a varible to store sizes, starting at 0
+    for entry in os.listdir("deps"):                       # create a for loop to go through each entry
+        if entry.endswith(".txt"):                         # check to see if the entry is a txt file
+            bytes += os.path.getsize("deps/" + entry)      # when true, add the file size to the bytes variable
+    return bytes                                           # return with the final count
